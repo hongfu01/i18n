@@ -1,7 +1,7 @@
 <script setup>
 import HelloWorld from './components/HelloWorld.vue'
 import TheWelcome from './components/TheWelcome.vue'
-console.log('123',this.$i18n);
+console.log('$i18n',this.$i18n)
 </script>
 
 <template>
