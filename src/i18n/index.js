@@ -10,5 +10,9 @@ const i18n = createI18n({
     zhtw: zhtw,
   }
 })
+console.log(i18n);
+i18n.install((app) => {
+  console.log('app',app);
+})
 
 export default i18n
