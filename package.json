@@ -6,6 +6,11 @@
     "type": "git",
     "url": "https://github.com/hongfu01/i18n.git"
   },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
   "main": "index.js",
   "author": "",
   "license": "ISC",

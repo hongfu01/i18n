@@ -1,11 +1,12 @@
 <script setup>
 import HelloWorld from './components/HelloWorld.vue'
 import TheWelcome from './components/TheWelcome.vue'
+console.log('123',this.$i18n);
 </script>
 
 <template>
   <header>
-    <div>123 {{ $t('account.bothYourFriend') }}</div>
+    <div>123 {{ $t('account.name') }}</div>
     <div class="wrapper">
       <HelloWorld msg="You did it!" />
     </div>
