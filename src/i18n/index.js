@@ -3,7 +3,6 @@ import enus from './langs/en-US/index.js'
 import zhtw from './langs/zh-TW/index.js'
 
 const i18n = createI18n({
-  allowComposition: true,
   locale: 'en',
   messages: {
     en: enus,
