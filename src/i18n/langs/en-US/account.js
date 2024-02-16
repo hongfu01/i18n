@@ -1,4 +1,4 @@
 export default {
-  account: "Account",
+  account: "Account {name}",
   name: "Name",
 };
