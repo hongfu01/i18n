@@ -1,5 +1,5 @@
 import { createI18n } from 'vue-i18n'
-import vue from 'vue'
+import { createApp } from 'vue';
 import enus from './langs/en-US/index.js'
 import zhtw from './langs/zh-TW/index.js'
 
@@ -11,10 +11,12 @@ const i18n = createI18n({
     zhtw: zhtw,
   }
 })
-//use i18n
-vue.use(i18n)
+//use createApp
+const app = createApp({})
+app.use(i18n)
 
-//add prototype
-vue.prototype.$i18n = i18n.global
+//app prototype
+app.config.globalProperties.$i18n = i18n.global;
+app.mount('#app')
 
 export default i18n
