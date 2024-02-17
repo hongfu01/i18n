@@ -15,7 +15,7 @@ export const countryNameMap = {
 export let langsMenu = Object.keys(countryNameMap).map((key) => ({
   name: countryNameMap[key],
   langCode: key,
-  img: require(`@/assets/image/countrys/${key}.png`)
+  img: import(`@/assets/image/countrys/${key}.png`)
 }));
 
 export const version = "v1.240201002";
