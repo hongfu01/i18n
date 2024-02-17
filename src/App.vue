@@ -1,6 +1,8 @@
 <script setup>
 import HelloWorld from './components/HelloWorld.vue'
 import TheWelcome from './components/TheWelcome.vue'
+import asserts from './i18n/assets.js';
+console.log('asserts',asserts);
 </script>
 
 <template>

@@ -14,7 +14,7 @@ export const countryNameMap = {
 };
 
 export let langsMenu = Object.keys(countryNameMap).map((key) => {
-  console.log('`assets.${key}`',assets[key]);
+  // console.log('`assets[key]`',assets[key]);
   return {
     name: countryNameMap[key],
     langCode: key,
