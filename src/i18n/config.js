@@ -13,10 +13,11 @@ export const countryNameMap = {
 };
 
 export let langsMenu = Object.keys(countryNameMap).map((key) => {
+  console.log('new URL(`../assets/image/countrys/${key}.png`, import.meta.url)',new URL(`../assets/image/countrys/${key}.png`, import.meta.url).href);
   return {
     name: countryNameMap[key],
     langCode: key,
-    img: new URL(`../assets/image/countrys/${key}.png`, import.meta.url)
+    img: new URL(`../assets/image/countrys/${key}.png`, import.meta.url).href
   }
 });
 
