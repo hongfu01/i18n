@@ -12,8 +12,9 @@ const i18n = createI18n({
   }
 })
 
-const loadLanguageAsync = () => {
+function loadLanguageAsync() {
   console.log('loadLanguageAsync');
+  return 'loadLanguageAsync'
 }
 
 export { loadLanguageAsync }
