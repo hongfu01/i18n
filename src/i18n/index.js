@@ -1,5 +1,5 @@
 import { createI18n } from 'vue-i18n'
-import { getLangConfig, defaultLang, setLangConfig, formatLangCode, version } from "./config";
+import { getLangConfig, defaultLang, setLangConfig, formatLangCode, version } from "./config.js";
 
 const config = getLangConfig();
 const loadedLanguages = Object.keys(config.messages);
