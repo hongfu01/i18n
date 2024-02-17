@@ -17,7 +17,7 @@ export let langsMenu = Object.keys(countryNameMap).map((key) => {
   return {
     name: countryNameMap[key],
     langCode: key,
-    img: new URL(`../assets/image/countrys/${key}.png`, import.meta.url).href
+    img: new URL(`@/assets/image/countrys/${key}.png`, import.meta.url).href
   }
 });
 
