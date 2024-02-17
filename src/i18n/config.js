@@ -1,6 +1,6 @@
 /** @format */
 
-import enus from "./langs/en-US";
+import enus from "./langs/en-US/index.js";
 
 export const tempCodes = {
   enus: "en-US",
