@@ -12,11 +12,13 @@ export const countryNameMap = {
   "zh-TW": "中文繁體",
 };
 
-export let langsMenu = Object.keys(countryNameMap).map((key) => ({
-  name: countryNameMap[key],
-  langCode: key,
-  img: import(`@/assets/image/countrys/${key}.png`)
-}));
+export let langsMenu = Object.keys(countryNameMap).map((key) => {
+  return {
+    name: countryNameMap[key],
+    langCode: key,
+    img: new URL(`../assets/image/countrys/${key}.png`, import.meta.url)
+  }
+});
 
 export const version = "v1.240201002";
 
@@ -57,7 +59,7 @@ export function formatLangCode(locale) {
   return tempCodes[locale.toLowerCase()] || defaultLang;
 }
 
-const cacheLangKey = window.cache_language_key || "cache_lang_config";
+const cacheLangKey = "cache_lang_config";
 
 export function getLangConfig() {
   // 获取缓存中的lang数据
