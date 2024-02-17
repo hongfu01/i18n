@@ -1,7 +1,8 @@
 /** @format */
 
 import enus from "./langs/en-US/index.js";
-import assets from "./assets.js";
+// import assets from "./assets.js";
+import enUs from '../assets/image/countrys/en-US.png';
 
 export const tempCodes = {
   enus: "en-US",
@@ -18,7 +19,7 @@ export let langsMenu = Object.keys(countryNameMap).map((key) => {
   return {
     name: countryNameMap[key],
     langCode: key,
-    img: assets[key]
+    img: enUs
   }
 });
 
