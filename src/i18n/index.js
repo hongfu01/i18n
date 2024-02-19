@@ -11,8 +11,6 @@ const i18n = createI18n({
 })
 
 function loadLanguageAsync(locale, cacheLang = false) {
-  console.log('loadLanguageAsync', locale);
-  console.log('config.locale', config.locale);
   locale = formatLangCode(locale);
   if (!cacheLang && config.locale) {
     // 有设置过语言的不设置为默然语言
