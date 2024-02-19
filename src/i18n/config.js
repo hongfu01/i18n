@@ -61,6 +61,7 @@ export function formatLangCode(locale) {
 const cacheLangKey = "cache_lang_config";
 
 export function getLangConfig() {
+  console.log('getLangConfig');
   // 获取缓存中的lang数据
   let config = null;
   try {
