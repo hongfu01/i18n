@@ -1,7 +1,6 @@
 /** @format */
 
 import enus from "./langs/en-US/index.js";
-// import assets from "./assets.js";
 
 export const tempCodes = {
   enus: "en-US",
@@ -85,7 +84,7 @@ export function getLangConfig() {
     locale: null,
     version,
     messages: Object.assign({}, (config && config.messages) || {}, {
-      "th-TH": enus,
+      "en-US": enus,
     }),
   };
 }
