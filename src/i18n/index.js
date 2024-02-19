@@ -25,9 +25,7 @@ function loadLanguageAsync(locale, cacheLang = false) {
     .then((messages) => {
       i18n.global.setLocaleMessage(locale, messages.default);
       loadedLanguages.push(locale);
-      i18n.locale = locale;
-      config.locale
-      // setLocale({ locale, messages, cacheLang });
+      setLocale({ locale, messages, cacheLang });
     })
     .catch((e) => {
       console.warn(`load ${locale} fail`, e);
@@ -47,8 +45,6 @@ function setLocale({ locale, messages, cacheLang }) {
   if (messages) {
     config.messages[locale] = messages.default;
   }
-  console.log('setLocale');
-  console.log('config.locale',config.locale);
   setLangConfig(config);
 }
 
