@@ -56,6 +56,8 @@ function setLocale({ locale, messages, cacheLang }) {
   if (messages) {
     config.messages[locale] = messages.default;
   }
+  console.log('setLocale');
+  console.log('config.locale',config.locale);
   setLangConfig(config);
 }
 
