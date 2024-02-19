@@ -4,15 +4,6 @@ import { getLangConfig, defaultLang, setLangConfig, formatLangCode, version } fr
 const config = getLangConfig();
 const loadedLanguages = Object.keys(config.messages);
 
-// const i18n = createI18n({
-//   legacy: false,
-//   locale: 'en',
-//   messages: {
-//     en: enus,
-//     zhtw: zhtw,
-//   }
-// })
-
 const i18n = createI18n({
   legacy: false,
   locale: config.locale || defaultLang,
@@ -32,11 +23,10 @@ function loadLanguageAsync(locale, cacheLang = false) {
   }
   return import(`./langs/${locale}/index.js`)
     .then((messages) => {
-      console.log('messages', messages);
-      console.log('i18n', i18n);
       i18n.global.setLocaleMessage(locale, messages.default);
       loadedLanguages.push(locale);
-      setLocale({ locale, messages, cacheLang });
+      config.locale = locale
+      // setLocale({ locale, messages, cacheLang });
     })
     .catch((e) => {
       console.warn(`load ${locale} fail`, e);
