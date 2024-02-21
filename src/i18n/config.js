@@ -64,7 +64,9 @@ export function getLangConfig() {
   // 获取缓存中的lang数据
   let config = null;
   try {
-    config = JSON.parse(localStorage.getItem(cacheLangKey));
+    if (typeof localStorage !== 'undefined') {
+      config = JSON.parse(localStorage.getItem(cacheLangKey));
+    }
   } catch (e) {
     console.log(e);
   }
